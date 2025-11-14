@@ -1,6 +1,6 @@
 {
   "name": "university-landing-pages",
-  "version": "2",
+  "version": 2,
   "builds": [
     {
       "src": "api/*.js",
