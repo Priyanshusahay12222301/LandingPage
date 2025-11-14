@@ -262,12 +262,12 @@
                 try {
                     const response = await fetch(endpoint);
                     if (response.ok) {
-                        console.log(`✅ ${endpoint} - Working`);
+                        console.log(`${endpoint} - Working`);
                     } else {
-                        console.log(`❌ ${endpoint} - Error ${response.status}`);
+                        console.log(`${endpoint} - Error ${response.status}`);
                     }
                 } catch (error) {
-                    console.log(`❌ ${endpoint} - Not available (deploy first)`);
+                    console.log(`${endpoint} - Not available (deploy first)`);
                 }
             }
         }
