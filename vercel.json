@@ -1,7 +1,10 @@
 {
-  "name": "university-landing-pages",
   "version": 2,
   "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
     {
       "src": "api/*.js",
       "use": "@vercel/node"
@@ -35,6 +38,10 @@
     {
       "src": "/lp2",
       "dest": "/LP2/index.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
     }
   ]
 }
