@@ -1,0 +1,112 @@
+const universityData = {
+  "university": {
+    "name": "Lovely Professional University",
+    "establishedYear": 2005,
+    "campuses": ["Phagwara (Main Campus)"],
+    "accreditation": "NAAC A++",
+    "ranking": {
+      "nirf": "Top 50 Universities",
+      "privateUniversity": "Top 5"
+    },
+    "overview": {
+      "description": "India's largest private university offering 200+ programmes with guaranteed placement support and global exposure.",
+      "totalStudents": 30000,
+      "faculty": 4000,
+      "internationalStudents": "From 50+ countries",
+      "campusArea": "600 acres"
+    },
+    "highlights": [
+      "NAAC A++ Grade",
+      "Students from 50+ countries",
+      "200+ international university partnerships",
+      "1000+ recruiters on campus",
+      "₹42 LPA highest package",
+      "Olympic-size swimming pool"
+    ]
+  },
+  "courses": [
+    {
+      "category": "Engineering & Technology",
+      "programs": [
+        {
+          "name": "B.Tech Computer Science & Engineering",
+          "duration": "4 years",
+          "eligibility": "10+2 with 60% marks in PCM",
+          "specializations": ["Artificial Intelligence", "Data Science", "Cybersecurity", "Cloud Computing"]
+        },
+        {
+          "name": "B.Tech Civil Engineering",
+          "duration": "4 years",
+          "eligibility": "10+2 with 60% marks in PCM",
+          "specializations": ["Structural Engineering", "Transportation Engineering", "Environmental Engineering"]
+        },
+        {
+          "name": "B.Tech Aerospace Engineering",
+          "duration": "4 years",
+          "eligibility": "10+2 with 60% marks in PCM",
+          "specializations": ["Aircraft Design", "Propulsion Systems", "Avionics"]
+        }
+      ]
+    },
+    {
+      "category": "Management & Commerce",
+      "programs": [
+        {
+          "name": "MBA",
+          "duration": "2 years",
+          "eligibility": "Bachelor's degree with 50% marks",
+          "specializations": ["International Business", "Digital Marketing", "Finance", "HR", "Operations"]
+        },
+        {
+          "name": "BBA International Business",
+          "duration": "3 years",
+          "eligibility": "10+2 with 50% marks",
+          "specializations": ["Global Trade", "Export-Import", "International Finance"]
+        }
+      ]
+    },
+    {
+      "category": "Arts & Design",
+      "programs": [
+        {
+          "name": "B.Des Fashion Design",
+          "duration": "4 years",
+          "eligibility": "10+2 from any stream",
+          "specializations": ["Textile Design", "Fashion Marketing", "Retail Management"]
+        },
+        {
+          "name": "BA Journalism & Mass Communication",
+          "duration": "3 years",
+          "eligibility": "10+2 with 50% marks",
+          "specializations": ["Print Media", "Electronic Media", "Digital Media"]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "statistics": {
+      "placementRate": "90%+",
+      "averagePackage": "₹5.8 LPA",
+      "highestPackage": "₹42 LPA",
+      "recruiters": 1000
+    },
+    "topRecruiters": [
+      "Google", "Microsoft", "Amazon", "Cognizant", "TCS", "HCL",
+      "Samsung", "Sony", "LG", "Flipkart", "Paytm", "Zomato"
+    ],
+    "sectors": ["IT/Software", "E-commerce", "Manufacturing", "Media", "Fashion", "Aviation"]
+  }
+};
+
+export default function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  res.status(200).json(universityData);
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Landing Pages</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: -40px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .content-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .content-header h2 {
+            color: #495057;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .content-header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 50px;
+        }
+        
+        .nav-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: height 0.4s ease;
+        }
+        
+        .nav-card.lpu::before {
+            background: linear-gradient(135deg, #ff6b6b 0%, #e91e63 100%);
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .nav-card:hover::before {
+            height: 100%;
+        }
+        
+        .nav-card:hover .card-content {
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+            transition: color 0.4s ease;
+        }
+        
+        .nav-card.lpu .card-icon {
+            color: #e91e63;
+        }
+        
+        .nav-card:hover .card-icon {
+            color: white;
+        }
+        
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: #667eea;
+            transition: color 0.4s ease;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .nav-card.lpu .card-cta {
+            color: #e91e63;
+        }
+        
+        .nav-card:hover .card-cta {
+            color: white;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-grid {
+                padding: 30px 20px;
+            }
+            
+            .nav-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-title">University Portal</div>
+        <div class="hero-subtitle">Explore premium educational opportunities with India's leading universities</div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="content-header">
+                <h2>Choose Your University</h2>
+                <p>Select a university to explore admission opportunities and course offerings</p>
+            </div>
+            
+            <div class="nav-grid">
+                <a href="LP1/index.html" class="nav-card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="card-title">Amity University</div>
+                        <div class="card-description">India's leading private university with NAAC A+ accreditation and 300+ international collaborations</div>
+                        <div class="card-cta">
+                            Explore Programs <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="LP2/index.html" class="nav-card lpu">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-title">Lovely Professional University</div>
+                        <div class="card-description">India's largest private university with NAAC A++ grade and students from 50+ countries</div>
+                        <div class="card-cta">
+                            Explore Programs <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function testAPIs() {
+            const endpoints = [
+                '/api/university1',
+                '/api/university1-fees', 
+                '/api/university2',
+                '/api/university2-fees'
+            ];
+            
+            console.log('Testing API endpoints...');
+            
+            for (let endpoint of endpoints) {
+                try {
+                    const response = await fetch(endpoint);
+                    if (response.ok) {
+                        console.log(`✅ ${endpoint} - Working`);
+                    } else {
+                        console.log(`❌ ${endpoint} - Error ${response.status}`);
+                    }
+                } catch (error) {
+                    console.log(`❌ ${endpoint} - Not available (deploy first)`);
+                }
+            }
+        }
+        
+        window.addEventListener('load', testAPIs);
+    </script>
+</body>
+</html>

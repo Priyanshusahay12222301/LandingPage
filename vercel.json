@@ -1,0 +1,40 @@
+{
+  "name": "university-landing-pages",
+  "version": "2",
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "LP1/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "LP2/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/lp1/(.*)",
+      "dest": "/LP1/$1"
+    },
+    {
+      "src": "/lp2/(.*)",
+      "dest": "/LP2/$1"
+    },
+    {
+      "src": "/lp1",
+      "dest": "/LP1/index.html"
+    },
+    {
+      "src": "/lp2",
+      "dest": "/LP2/index.html"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "university": {
+    "name": "Amity University",
+    "establishedYear": 2005,
+    "campuses": ["Noida", "Gurgaon", "Mumbai", "Jaipur", "Lucknow"],
+    "accreditation": "NAAC A+",
+    "ranking": {
+      "nirf": "Top 100",
+      "privateUniversity": "Top 10"
+    },
+    "overview": {
+      "description": "Amity University is India's leading private university offering world-class education across 250+ programmes with 100% placement assistance.",
+      "totalStudents": 175000,
+      "faculty": 4000,
+      "internationalCollaborations": 300,
+      "campusArea": "1000+ acres"
+    },
+    "highlights": [
+      "NAAC A+ accredited",
+      "300+ international collaborations",
+      "100% placement assistance",
+      "State-of-the-art infrastructure",
+      "Industry partnerships with 500+ companies"
+    ]
+  },
+  "courses": [
+    {
+      "category": "Engineering & Technology",
+      "programs": [
+        {
+          "name": "B.Tech Computer Science & Engineering",
+          "duration": "4 years",
+          "eligibility": "10+2 with Physics, Chemistry, Mathematics",
+          "specializations": ["AI & ML", "Data Science", "Cybersecurity", "Full Stack Development"]
+        },
+        {
+          "name": "B.Tech Electronics & Communication",
+          "duration": "4 years",
+          "eligibility": "10+2 with Physics, Chemistry, Mathematics",
+          "specializations": ["VLSI Design", "Embedded Systems", "Communication Systems"]
+        }
+      ]
+    },
+    {
+      "category": "Management & Business",
+      "programs": [
+        {
+          "name": "MBA",
+          "duration": "2 years",
+          "eligibility": "Bachelor's degree with 50% marks",
+          "specializations": ["Finance", "Marketing", "HR", "International Business", "Digital Marketing"]
+        },
+        {
+          "name": "BBA",
+          "duration": "3 years",
+          "eligibility": "10+2 with 50% marks",
+          "specializations": ["Finance", "Marketing", "International Business"]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "statistics": {
+      "placementRate": "100%",
+      "averagePackage": "₹6.5 LPA",
+      "highestPackage": "₹50+ LPA",
+      "studentsPlaced": 2000
+    },
+    "topRecruiters": [
+      "Microsoft", "Google", "Amazon", "TCS", "Infosys", "Wipro", 
+      "Deloitte", "KPMG", "EY", "Accenture", "IBM", "Oracle"
+    ],
+    "sectors": ["IT/Software", "Consulting", "Finance", "Manufacturing", "Healthcare"]
+  }
+}
